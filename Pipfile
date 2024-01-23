@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 bleak = "*"
-asciimatics = "*"
 
 [dev-packages]
 
