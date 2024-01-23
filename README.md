@@ -16,6 +16,7 @@ This application lets you do things like:
 
 There's a couple of things I may or may not add as time goes on, ranging from:
 - A desperate need of method documentation
+- Additional documentation around usage and command flags in the README.
 - Refactoring the very simple CLI to a GUI or a more complex CLI utilizing [asciimatics](https://pypi.org/project/asciimatics/)
 - Adding persistence of any interacted-with mugs for quicker startup of the app with less command-line wrangling.
   - This would allow things like using the mug's name in the prompts instead of the default 'Ember Ceramic Mug'.
