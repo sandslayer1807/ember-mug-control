@@ -78,9 +78,9 @@ of Celsius or Fahrenheit). The unit can be checked using the `status` command.
 
 The temperature must fall into the following ranges:
 - For Celsius
-  - 32 < x < 93
+  - 50 <= x <= 62.5
 - For Fahrenheit
-  - 90 < x < 200
+  - 120 <= x <= 145
 
 ```
 ./ember_mug_control.py connect --id {mug_mac_address} set-target-temp --temp 80

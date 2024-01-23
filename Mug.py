@@ -190,7 +190,8 @@ class Mug:
             current temperature unit (C or F).
 
         Raises:
-            ValueError: Temperature out of range (90 < x < 200)
+            ValueError: Temperature out of range (120F< x < 145F)
+            ValueError: Temperature out of range (50C < x < 62.5C)
 
         Returns:
             str: The set temperature.
@@ -199,11 +200,10 @@ class Mug:
         # need to get the unit to determine if it's in C or F so we can convert appropriately
         current_temp_unit = await self.temp_unit
         # add some safeguards here...
-        # TODO: Figure out what the actual ember mug limits are instead of using made up numbers
-        if current_temp_unit == "F" and (value_to_set > 200 or value_to_set < 90):
-            raise ValueError(f"Temperature {value_to_set} deg F out of range 90 < x < 200")
-        if current_temp_unit == "C" and (value_to_set > 93 or value_to_set < 32):
-            raise ValueError(f"Temperature {value_to_set} deg C out of range 32 < x < 93")
+        if current_temp_unit == "F" and (value_to_set > 145 or value_to_set < 120):
+            raise ValueError(f"Temperature {value_to_set} deg F out of range 120 < x < 145")
+        if current_temp_unit == "C" and (value_to_set > 62.5 or value_to_set < 50):
+            raise ValueError(f"Temperature {value_to_set} deg C out of range 50 < x < 62.5")
 
         if current_temp_unit == "F":
             value_to_set = Temp.to_celsius(value_to_set)
