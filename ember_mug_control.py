@@ -12,12 +12,12 @@ from bleak import BleakClient, BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 from bleak.exc import BleakDeviceNotFoundError
-from mug import Mug
+from Mug import Mug
 
 # list to ensure we've not seen the device before
 seen_devices = []
 
-def device_found(device: BLEDevice, advertisement_data: AdvertisementData):
+def device_found(device: BLEDevice, _advertisement_data: AdvertisementData):
     """_summary_
 
     Args:
@@ -29,7 +29,7 @@ def device_found(device: BLEDevice, advertisement_data: AdvertisementData):
         print()
         print(f"[{len(seen_devices) + 1}]: { device}")
         print("".join('-'*len(str(device))))
-        print(advertisement_data)
+        # print(advertisement_data)
         seen_devices.append(device.address)
 
 async def mug_find(num_seconds):
