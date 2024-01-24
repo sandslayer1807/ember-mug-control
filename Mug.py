@@ -1,6 +1,6 @@
 import math
 
-from temp import Temp
+from Temp import Temp
 
 # Created using the ever-helpful Ember Mug BT Documentation located here:
 #   https://github.com/orlopau/ember-mug
